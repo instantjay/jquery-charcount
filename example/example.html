@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Character Count</title>
+    <link rel="stylesheet" href="example.css">
+</head>
+<body>
+    <form>
+        <ul>
+            <li>
+                <label>Text input field</label>
+                <input type="text" id="textinput">
+                <p>
+                    Text field contains <span data-charcounter-for="textinput"></span> characters.
+                </p>
+            </li>
+            <li>
+                <label>Text area</label>
+                <textarea id="textarea" class="regular"></textarea>
+                <p>
+                    Text area contains <span data-charcounter-for="textarea"></span> characters.
+                </p>
+            </li>
+            <li>
+                <label>Limited text area</label>
+                <textarea id="limitedtextarea" class="limited">Lorem ipsum dolor sit amet.</textarea>
+                <p>
+                    This text area contains <span data-charcounter-for="limitedtextarea"></span> characters.
+                </p>
+            </li>
+            <li>
+                <label>Text area with custom delimiter</label>
+                <textarea id="delimitertextarea" class="delimiter">Lorem ipsum.</textarea>
+                <p>
+                    This text area contains <span data-charcounter-for="delimitertextarea"></span> characters
+                </p>
+            </li>
+        </ul>
+    </form>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../jquery.charcount.js"></script>
+
+    <script type="text/javascript">
+        $("input[type=text]").charCount();
+        $("textarea.regular").charCount();
+        $("textarea.limited").charCount({'maxLength': 200});
+        $("textarea.delimiter").charCount({delimiter: ' of ', maxLength: 200})
+    </script>
+</body>
+</html>
