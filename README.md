@@ -6,18 +6,25 @@ Add a live-updating character counter anywhere on a page to one or multiple text
 Optional Parameters
 ================
 
-<h2>maxLength</h2>
+<h3>maxLength</h3>
 
 Is there a default allowed length for this text field?
 Default: null
 
-<h2>delimiter</h2>
+<h3>delimiter</h3>
 If you have specified a maxLength and wish to modify the default styling 'x/y' to i.e. 'x of y', you may modify this parameter
 Default: /
 
-How do I initialize one or more counters?
+Example
 ================
+
+<b>HTML</b>
+
+    <textarea id="mytextarea"></textarea>
+    <span data-charcounter-for="mytextarea"></span>
+
+<b>Javascript</b>
 
     $("textarea").charCount();
 
-Will initialize a character counter with default options on the given elements. See the examples/ folder for more.
+Will initialize a character counter on the given elements. See the examples/ folder for more detailed examples.
