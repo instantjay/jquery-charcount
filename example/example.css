@@ -12,9 +12,15 @@ label, input, textarea {
     display: block;
 }
 
+label {
+    font-weight: bold;
+}
+
 input[type=text], textarea {
     white-space: nowrap;
     width: 300px;
+    border: 1px solid #000;
+    background-color: #eee;
 }
 
 p {
