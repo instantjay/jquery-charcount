@@ -7,9 +7,12 @@ Optional Parameters
 ================
 
 <h3>maxLength</h3>
-
 Is there a default allowed length for this text field?
 Default: null
+
+<h3>enforceMaxLength</h3>
+If you want to prevent input after maxLength has been reached, set this to true.
+Default: false
 
 <h3>delimiter</h3>
 If you have specified a maxLength and wish to modify the default styling 'x/y' to i.e. 'x of y', you may modify this parameter
