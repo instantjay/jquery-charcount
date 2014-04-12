@@ -28,6 +28,6 @@ p {
     font-size: 0.8em;
 }
 
-.max-length-exceeded {
+.max-length-reached {
     color: red;
 }

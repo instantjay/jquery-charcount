@@ -22,10 +22,12 @@
                             }
                         }
 
-                        outputElement.addClass("max-length-exceeded");
+                        settings.maxLengthReachedCallback(this);
+
+                        outputElement.addClass("max-length-reached");
                     }
                     else {
-                        outputElement.removeClass("max-length-exceeded");
+                        outputElement.removeClass("max-length-reached");
                     }
                 }
 
@@ -37,6 +39,7 @@
         var settings = $.extend({
             maxLength: null,
             enforceMaxLength: false,
+            maxLengthReachedCallback: function(obj) {},
             delimiter: "/"
         }, options);
 

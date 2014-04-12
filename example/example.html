@@ -61,6 +61,17 @@
                 </p>
             </li>
         </ul>
+
+        <h2></h2>
+        <ul id="max-length-callback">
+            <li>
+                <label for="custom-callback">Callback when maxLength reached</label>
+                <input type="text" id="custom-callback">
+                <p>
+                    Callback defined to print the input ID to console. Input contains <span data-charcounter-for="custom-callback"></span> characters.
+                </p>
+            </li>
+        </ul>
     </form>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
@@ -73,6 +84,10 @@
         $("#max-length-assigned #enforced-max-length-input").charCount({'maxLength': 50, "enforceMaxLength": true});
 
         $("#custom-delimiter-assigned #delimitertextarea").charCount({delimiter: ' of ', maxLength: 200})
+
+        $("#max-length-callback #custom-callback").charCount({maxLength: 20, maxLengthReachedCallback: function(e) {
+            console.log("maxLength for element #"+ e.id +" reached!");
+        }});
     </script>
 </body>
 </html>
